@@ -17,3 +17,18 @@ select sysdate FROM dual;
 -- 해석 emp 테이블에서 JOB 컬럼의 값이 MANAGER인 행 조회
 SELECT * FROM EMP   
 WHERE JOB = 'MANAGER';
+-- ### 🔹 ② 프로젝션 (Projection) – 열 중심 조회
+-- 특정 **열(Column)**만 조회
+-- sql
+-- 보고싶은열 ename 사원이름, sal 급여
+select ename, sal from emp;
+select * from emp;
+
+
+--### 셀렉션 + 프로젝션 함꼐사용
+
+-- sql
+--보고싶은 열 ename 사원이름, sal 급여
+-- where 조건 sal 급여가 2000 이상인 행 조회
+SELECT ename, sal FROM emp
+WHERE sal > 2000;
